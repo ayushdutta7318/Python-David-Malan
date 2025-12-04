@@ -109,3 +109,70 @@ students_list = [
 
 for elements in students_list:
     print(elements["name"], elements["job"], elements["house#"], sep=", ");
+
+
+# print multiple patterns using *-string multiplication:
+
+print("--------------------------------------");
+
+def main():
+    print_height(3);
+    print_row(3);
+
+def print_height(n):
+    print("#\n"*n, end="");
+
+def print_row(n):
+    print("*"*n);
+
+
+main();
+
+
+def print_square(n):
+    for i in range(n):
+        for j in range(n):
+           print("#", end="");
+        print();
+
+print_square(5);
+print_square(5);
+print_square(5);
+print_square(10);
+print_square(15);
+
+# instead of using nested loop, lets do something else:
+
+print("--------------------------------------");
+
+def print_quad(n):
+    for i in range(n):
+        print_line(n);
+
+def print_line(n):
+    print("*"*n);
+
+print_quad(5);
+
+
+# print hollow pattern:
+print("--------------------------------------");
+
+def print_box(n):
+    for i in range(n+1):
+        # print(i);
+        if i == 0 or i == n:
+            print("*"*n);
+        else:
+            print("*", " "*(n-4),"*");
+        
+      
+print_box(5);
+print_box(10);
+print_box(15);
+
+print_box(5);
+print_box(5);
+print_box(5);
+
+
