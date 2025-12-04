@@ -70,6 +70,42 @@ def get_number():
 main();
 
 
+# Using Loops in Lists:
+
+print("----------------------------");
+students = ["ayush","raju", "ranjan"];
+
+for elements in students:
+    print(elements);
 
 
+# also
 
+print("--------------------------------------");
+
+for elements in range(len(students)):
+    print(f"{elements+1}: {students[elements]}");
+
+# Using loops with dictionaries:
+
+print("--------------------------------------");
+
+students_house = {
+    "house_1": "Ayush",
+    "house_2": "Rohan",
+    "house_3": "Ravi",
+}
+
+print(students_house);
+
+for student in students_house:
+    print(student, students_house[student]);
+
+# dictionaries inside of lists:
+
+students_list = [
+    {"name": "ayush", "job": "Electronics and Electrical Engineer", "house#": 1,}, {"name": "ranjan", "job": "design engineer", "house#":2}, {"name": "mahesh", "job":"Mechatronics Engineer", "house#":None}
+]
+
+for elements in students_list:
+    print(elements["name"], elements["job"], elements["house#"], sep=", ");
