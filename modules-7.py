@@ -42,3 +42,10 @@ import avg_module_7;
 score = avg_module_7.average();
 
 print(score);
+
+import Libraries_7;
+import sys;
+
+if(len(sys.argv) == 2):
+    Libraries_7.hello(sys.argv[1]);
+    Libraries_7.goodbye(sys.argv[1]);
