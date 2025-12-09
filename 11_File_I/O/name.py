@@ -59,3 +59,42 @@ file_2 = open("names_.txt", "a");
 
 file_2.write(f"{name}\n");
 file_2.close();
+
+# reading from a file: with keyword:
+
+"""
+The with keyword is used for something called a context manager.
+
+In simple words:
+
+with makes sure some setup happens before your code runs and cleanup happens after. Automatically.
+
+Most common use: File Handling
+
+Without with:
+
+file = open("data.txt", "r")
+contents = file.read()
+file.close()     # must close manually
+
+
+If you forget file.close(), this causes problems.
+
+With with:
+with open("data.txt", "r") as file:
+    contents = file.read()
+
+
+When the block ends, Python automatically closes the file.
+
+You don’t need file.close() — Python handles it.
+"""
+
+with open("names_.txt", "r") as file:
+    for line in file:
+        # print("hello,", line);
+        print("hello,", line.rstrip());
+
+        
+#but we can see extra gap in the files, this is bcz of \n in write function of open, now here we added print fn which creates an extra line. so wuse rstrip() fn to avoid this. 
+
