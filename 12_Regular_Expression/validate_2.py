@@ -58,3 +58,78 @@ if re.search(r"^.+@.+\.edu$", email):
 else:
     print("invalid");
 
+
+# what if i write ayush@@@@@dutta.edu --> o/p is still valid. therefore we have []: which means set of characters and [^char]: means any character except char.
+
+print("--------------------------------------------");
+
+if re.search(r"^[^@]+@[^@]+\.edu$",email):
+    print("valid");
+else:
+    print("invalid");
+
+
+
+# what if user adds .edu at beginning of str: --> valid. so to exclude .edu at beginning, we write below:
+
+print("------------------------");
+
+if re.search(r"^[^@][^\.edu]+@[^@]+\.edu$",email):
+    print("valid");
+else:
+    print("invalid");
+
+# to include a range of char:
+
+print("-----------------------------------------------");
+
+if re.search(r"^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.edu$",email):
+    print("valid");
+else:
+    print("invalid");
+
+# aliter: \w any alphanumeric char and _
+
+if re.search(r"^\w+@\w+\.edu$",email):
+    print("valid");
+else:
+    print("invalid");
+
+"""
+\d decimal digit, \D no decimal digit
+\s whitespace, \S no whitespace
+\w any alphanumeric char and _, \W no alphanumerica char and _
+"""
+
+# using or operator in above pattern
+
+print("----------------------------------------------")
+
+if re.search(r"^(\w|\s)+@(\w|\s)+\.edu$",email):
+    print("valid");
+else:
+    print("invalid");
+
+# if  i write AYUSH@DUTTA.EDU -->invalid, bcz .edu is in uppercase. to resolve this.
+
+print("-------------------");
+
+if re.search(r"^\w+@\w+\.edu$",email.lower()):
+    print("valid");
+else:
+    print("invalid");
+
+# flags in regex: we structure our  regex with flags like .IGNORECASE, .DOTALL.
+
+if re.search(r"^\w.+@\w.+\.edu$",email, re.IGNORECASE):
+    print("valid");
+else:
+    print("invalid");
+
+
+# if we input ayush@dutta.something.edu --> invalid, to resolve: ?--> 0 repition or 1
+
+if re.search(r"^\w+@(\w+\.)?\w+\.edu$",email,re.IGNORECASE):
+    print("valid");
+else:
+    print("invalid");
