@@ -30,9 +30,3 @@ if matches := re.search(r"^(.+), *(.+)$", name):
 print(f"hello, {name}");
 
 
-# Replacing in string:
-
-url = input("URL: ").strip();
-
-username = url.replace("https://google.com/", "");
-print(f"username: {username}");
