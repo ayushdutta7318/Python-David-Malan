@@ -26,3 +26,5 @@ class Hat:
 hat = Hat();
 
 hat.sort("Ayush");
+
+# nex lec
