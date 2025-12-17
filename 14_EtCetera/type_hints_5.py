@@ -13,4 +13,4 @@ print(meows);
 
 # in terminal write: mypy type_hints_5.py --show-error-codes
 
-# doc string tomorrow.
+# docstring tomorrow.
