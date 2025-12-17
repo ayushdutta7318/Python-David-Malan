@@ -23,7 +23,6 @@ def yell_2(*words):
     uppercased = [word.upper() for word in words];#this is filetering in pyhton list
     print(*uppercased);
 
-
 if __name__ == "__main__":
     main();
 
