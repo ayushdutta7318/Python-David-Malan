@@ -21,7 +21,7 @@ print("-----------------------------------");
 
 import re;
 
-username = re.sub(r"^(https?://)?(www\.)?google\.com/.+", "", url);
+username = re.sub(r"^(https?://)?(www\.)?google\.com/", "", url);
 print(f"username: {username}");
 
 # aliter: above re.search:
@@ -38,5 +38,6 @@ if(matches):
 
 
 # now if we dont want to capture a group enclosed in (). we useL (?:) - 
+
 
 
