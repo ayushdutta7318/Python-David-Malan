@@ -34,19 +34,20 @@ But each car’s values are different.
 #     ... #this means do nothing for now
     
 class Student:
-    def __init__(name, house):
-        pass
-
+    def __init__(self, name, house):
+        self.name = name;
+        self.house = house;
 
 
 def main():
-    student = get_student();
-    print(f"Student name: {student['name']}, student favorite subject is {student['favsubject']}")
+    s1 = get_student();
+    print(f"{s1.name} from {s1.house}");
+
 
 def get_student():
-    student = Student();
-    student['name'] = input("Enter name");
-    student['house'] = input("Enter your house: ");
+    name = input("name: ");
+    house = input("house: ");
+    student = Student(name, house);
     return student;
 
 
