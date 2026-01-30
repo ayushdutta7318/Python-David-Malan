@@ -27,17 +27,19 @@ print(f"username: {username}");
 # aliter: above re.search:
 
 print("-------------------");
-matches = re.search(r"^https?://(?:www\.)?google\.com/([a-z0-9]+)$", url, re.IGNORECASE);
-# print(matches);
-# print(matches.group(0));
-# print(matches.group(1));
-# print(matches.group(2));
+username = re.search(r"^(https?://)?(www\.)?google\.com/(\w+)$", url, re.IGNORECASE)
+
+print(f"username: {username.group(0)} - line 1")
+print(f"username: {username.group(1)} - line 2")
+print(f"username: {username.group(2)} - line 3")
+print(f"username: {username.group(3)} - line 4")
 
 if(matches):
     print(f"username: {matches.group(1)}");
 
 
 # now if we dont want to capture a group enclosed in (). we useL (?:) - 
+
 
 
 
