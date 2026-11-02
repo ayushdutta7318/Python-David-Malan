@@ -38,7 +38,7 @@ print(total(coins_1["galleons"], coins_1["sickles"], coins_1["knuts"]), "knuts")
 
 # or
 
-print(total(**coins_1), "knuts");
+print(total(*coins_1.values()), "knuts");
 
 # New topic:
 
